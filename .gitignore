@@ -1,0 +1,34 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Entorno
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+dist/
+build/
+
+# Cobertura
+coverage/
+.nyc_output/
+
+# Artefactos generales
+*.tmp
+*.bak
