@@ -17,3 +17,17 @@ Documentación técnica y de trabajo del equipo.
 - Todo componente nuevo debe tener responsabilidad clara y nombre explícito.
 - Toda funcionalidad crítica debe incluir pruebas.
 - Endpoints de estado (`health`) deben mantenerse simples y estables.
+## Carpeta `src/`
+Contiene el código fuente principal de la aplicación.
+
+## Carpeta `tests/`
+Contiene pruebas unitarias, de integración o end-to-end.
+
+## Carpeta `docs/`
+Contiene documentación funcional y técnica.
+
+### Reglas sugeridas
+
+- Evitar mezclar scripts temporales en `src/`.
+- Documentar decisiones importantes en `docs/`.
+- Agregar una prueba por cada funcionalidad relevante nueva.
