@@ -15,4 +15,15 @@
 
 - Incluir resumen técnico de cambios.
 - Incluir evidencia de validación (lint, test, build).
+- Mantener commits pequeños y descriptivos.
+
+## 2. Calidad
+
+- Ejecutar pruebas antes de abrir PR.
+- Validar formato y linting.
+
+## 3. Pull Request
+
+- Resumir cambios.
+- Incluir pasos de validación.
 - Solicitar revisión.
