@@ -1,0 +1,54 @@
+# DigitalTechsac
+
+Proyecto implementado con **Next.js + TypeScript**, optimizado para despliegue en **Vercel**.
+
+## ¿Por qué este stack?
+
+- Integración nativa con Vercel (deploy, preview y escalado).
+- Excelente rendimiento y SEO gracias a rendering híbrido.
+- TypeScript para mayor mantenibilidad.
+- App Router moderno y sencillo de escalar.
+
+## Scripts
+
+- `npm run dev`: entorno local.
+- `npm run build`: build de producción.
+- `npm run start`: servir build de producción.
+- `npm run lint`: validación estática (configurada con `next/core-web-vitals`).
+- `npm run test`: pruebas unitarias con Vitest.
+
+## Estructura
+
+```text
+.
+├── src/
+│   ├── app/
+│   │   ├── api/health/route.ts
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   └── components/
+│       └── Hero.tsx
+├── tests/
+│   ├── hero.test.tsx
+│   └── setup.ts
+├── docs/
+└── package.json
+```
+
+## Checklist Vercel
+
+1. Configurar variables de entorno en Vercel.
+2. Confirmar que el comando de build sea `npm run build`.
+3. Validar endpoint `/api/health` tras cada deploy.
+
+
+## Troubleshooting Vercel
+
+Si el build falla con `Configuring Next.js via 'next.config.ts' is not supported`:
+
+1. Verifica que exista `next.config.mjs` y **no** exista `next.config.ts`.
+2. Asegúrate de desplegar el commit más reciente (no uno anterior cacheado).
+3. Reintenta deploy en Vercel.
+
+> Este proyecto ejecuta una validación automática en `prebuild` para detectar ese problema antes de `next build`.
