@@ -21,7 +21,7 @@ export function getProductSchema() {
       url: SITE_CONFIG.url,
       priceCurrency: PRICING.currency,
       price: PRICING.current.toString(),
-      priceValidUntil: '2026-12-31',
+      priceValidUntil: new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
       hasMerchantReturnPolicy: {
@@ -204,6 +204,81 @@ export function getWebPageSchema() {
     },
     specialty: 'Licencias de software de diseño gráfico para Colombia',
     significantLink: `https://wa.me/${WHATSAPP.number}`,
+    dateModified: new Date().toISOString().split('T')[0],
+  };
+}
+
+// Schema 8: SoftwareApplication — Rich results de software
+export function getSoftwareApplicationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Canva Pro EDU',
+    applicationCategory: 'DesignApplication',
+    operatingSystem: 'Web, Windows, macOS, iOS, Android',
+    description: 'Herramienta profesional de diseño gráfico con inteligencia artificial, quitafondos automático, +100 millones de recursos premium y kit de marca.',
+    offers: {
+      '@type': 'Offer',
+      price: PRICING.current.toString(),
+      priceCurrency: PRICING.currency,
+      url: SITE_CONFIG.url,
+      availability: 'https://schema.org/InStock',
+      seller: {
+        '@type': 'Organization',
+        name: SITE_CONFIG.name,
+      },
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      reviewCount: '512',
+    },
+    screenshot: IMAGES.hero,
+    featureList: 'IA Generativa, Quitafondos automático, 100M+ recursos premium, Kit de marca, Redimensionamiento mágico, 100GB almacenamiento',
+  };
+}
+
+// Schema 9: HowTo — Rich snippets de "cómo comprar"
+export function getHowToSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'Cómo comprar Canva Pro EDU en Colombia por $19.900 COP',
+    description: 'Proceso 100% seguro para activar Canva Pro EDU. Activamos primero, pagas después.',
+    totalTime: 'PT5M',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'COP',
+      value: PRICING.current.toString(),
+    },
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Escríbenos por WhatsApp',
+        text: 'Haz clic en el botón de WhatsApp y envíanos tu correo electrónico de Canva. Respondemos en menos de 5 minutos.',
+        url: `https://wa.me/${WHATSAPP.number}`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Te activamos Canva Pro',
+        text: 'Activamos la licencia Pro EDU directamente en tu cuenta existente. No necesitas crear otra cuenta ni cambiar contraseña.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Verificas que funcione',
+        text: 'Entras a tu Canva y verificas que todas las funciones premium estén activas: quitafondos, IA, plantillas y más.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Pagas solo si estás satisfecho',
+        text: 'Una vez confirmes que todo funciona perfecto, realizas el pago de $19.900 COP por Nequi, DaviPlata o Bancolombia.',
+      },
+    ],
   };
 }
 

@@ -53,8 +53,8 @@ export default function HeroSection() {
           itemScope
           itemType="https://schema.org/Offer"
         >
-          <div className="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-            OFERTA LIMITADA
+          <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg animate-pulse">
+            🔥 ÚLTIMAS UNIDADES A ESTE PRECIO
           </div>
           <p className="text-slate-400 text-lg line-through mb-2">
             Precio Normal: ${PRICING.original.toLocaleString("es-CO")} COP/año
@@ -103,6 +103,14 @@ export default function HeroSection() {
               />
             </svg>
             Activación flash en menos de 5 minutos vía WhatsApp
+          </p>
+          <div className="flex items-center justify-center gap-4 mt-4 text-xs text-slate-400">
+            <span className="flex items-center gap-1">📱 Nequi</span>
+            <span className="flex items-center gap-1">💳 DaviPlata</span>
+            <span className="flex items-center gap-1">🏦 Bancolombia</span>
+          </div>
+          <p className="text-xs text-green-600 font-semibold mt-3">
+            🔒 Garantía de devolución si no funciona
           </p>
         </div>
       </div>

@@ -10,6 +10,8 @@ import {
   getWebSiteSchema,
   getWebPageSchema,
   getLocalBusinessSchema,
+  getSoftwareApplicationSchema,
+  getHowToSchema,
 } from '@/lib/structured-data';
 
 const inter = Inter({
@@ -33,7 +35,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   title: {
-    default: `Canva Pro 1 Año $${PRICING.current.toLocaleString('es-CO')} COP | Activa Primero, Paga Después | ${SITE_CONFIG.name} Colombia`,
+    default: `Diseña como Profesional por $${PRICING.current.toLocaleString('es-CO')} COP/año | Canva Pro EDU Colombia | ${SITE_CONFIG.name}`,
     template: `%s | ${SITE_CONFIG.name}`,
   },
   description: SITE_CONFIG.longDescription,
@@ -61,23 +63,23 @@ export const metadata: Metadata = {
     locale: 'es_CO',
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
-    title: `🔥 Canva Pro 1 Año x $${PRICING.current.toLocaleString('es-CO')} COP | Activa y luego Pagas | Colombia`,
+    title: `🎨 Diseña como Profesional x $${PRICING.current.toLocaleString('es-CO')} COP/año | Canva Pro EDU | ${SITE_CONFIG.name}`,
     description:
-      '¡No pagues mensualidades! Licencia oficial Canva Pro EDU por 1 año completo. Ahorra 89% hoy. Activación inmediata, garantía total y soporte 24/7 por WhatsApp. Paga por Nequi, DaviPlata o Bancolombia.',
+      `🔥 ¡Activa primero, paga después! Licencia Canva Pro EDU 1 año completo por $${PRICING.current.toLocaleString('es-CO')} COP. IA generativa, quitafondos, +100M recursos premium. Ahorra ${PRICING.discountPercent}%. Nequi, DaviPlata y Bancolombia. Soporte 24/7.`,
     images: [
       {
         url: IMAGES.og,
         width: 1200,
         height: 630,
-        alt: `Canva Pro EDU 1 Año por $${PRICING.current.toLocaleString('es-CO')} COP - ${SITE_CONFIG.name} Colombia`,
+        alt: `Diseña como Profesional - Canva Pro EDU $${PRICING.current.toLocaleString('es-CO')} COP - ${SITE_CONFIG.name} Colombia`,
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Canva Pro 1 Año $${PRICING.current.toLocaleString('es-CO')} COP | ${SITE_CONFIG.name} Colombia`,
-    description: SITE_CONFIG.description,
+    title: `🎨 Diseña como Profesional $${PRICING.current.toLocaleString('es-CO')} COP/año | Canva Pro EDU | ${SITE_CONFIG.name}`,
+    description: `Activa primero, paga después. Canva Pro EDU 1 año: IA, quitafondos, +100M recursos premium. Ahorra ${PRICING.discountPercent}%. ¡Activa hoy!`,
     images: [IMAGES.og],
     creator: '@digitaltechsac',
   },
@@ -98,7 +100,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Todos los schemas JSON-LD para máximo SEO
+// 9 Schemas JSON-LD para máximo SEO
 const schemas = [
   getProductSchema(),
   getOrganizationSchema(),
@@ -107,6 +109,8 @@ const schemas = [
   getWebSiteSchema(),
   getWebPageSchema(),
   getLocalBusinessSchema(),
+  getSoftwareApplicationSchema(),
+  getHowToSchema(),
 ];
 
 export default function RootLayout({

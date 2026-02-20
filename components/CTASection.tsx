@@ -22,7 +22,15 @@ export default function CTASection() {
         <div className="max-w-md mx-auto">
           <WhatsAppButton variant="white" label="SOLICITAR MI ACTIVACIÓN AHORA" />
           <p className="text-purple-200 text-sm mt-4">
-            Garantía de satisfacción: si no funciona, te devolvemos tu dinero.
+            🔒 Garantía de satisfacción: si no funciona, te devolvemos tu dinero.
+          </p>
+          <div className="flex items-center justify-center gap-4 mt-3 text-xs text-purple-300">
+            <span>📱 Nequi</span>
+            <span>💳 DaviPlata</span>
+            <span>🏦 Bancolombia</span>
+          </div>
+          <p className="text-purple-300 text-xs mt-3">
+            +500 colombianos ya activaron · Soporte 24/7 por WhatsApp
           </p>
         </div>
       </div>

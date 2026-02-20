@@ -18,9 +18,10 @@ export default function TestimonialsSection() {
         <h2 id="testimonials-heading" className="text-3xl font-bold mb-2">
           Más de <span className="gradient-text">500 Colombianos</span> ya ahorraron
         </h2>
-        <p className="text-slate-600 mb-12">
+        <p className="text-slate-600 mb-2">
           Emprendedores, estudiantes y creadores de contenido que ya disfrutan Canva Pro EDU al mejor precio.
         </p>
+        <p className="text-sm text-slate-500 font-semibold mb-12">⭐ 4.9/5 estrellas · 98% tasa de satisfacción · +500 licencias activadas</p>
 
         <div className="grid md:grid-cols-3 gap-8">
           {TESTIMONIALS.map((t) => (
