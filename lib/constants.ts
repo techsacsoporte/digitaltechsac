@@ -10,9 +10,9 @@ export const SITE_CONFIG = {
   language: 'es',
   country: 'CO',
   description:
-    'Licencia Canva Pro EDU por 1 año a solo $19.900 COP. Activación previa al pago, garantía total y soporte 24/7 por WhatsApp en toda Colombia.',
+    'Diseña como profesional sin pagar mensualidades caras. Licencia Canva Pro EDU 1 año por $19.900 COP. Activamos primero, pagas después. IA, quitafondos, +100M recursos premium. Nequi, DaviPlata, Bancolombia. ¡Activa hoy!',
   longDescription:
-    'Digital TechSac ofrece licencias Canva Pro EDU legítimas para emprendedores, estudiantes y creadores de contenido en Colombia. Precio único de $19.900 COP por 12 meses con activación inmediata, soporte por WhatsApp y métodos de pago como Nequi, DaviPlata y Bancolombia.',
+    'Diseña como profesional con Canva Pro EDU por solo $19.900 COP al año. Digital TechSac activa tu licencia antes de que pagues — cero riesgo. Incluye IA generativa, quitafondos automático, +100 millones de recursos premium, kit de marca y 100GB en la nube. Paga por Nequi, DaviPlata o Bancolombia. Más de 500 colombianos ya confían en nosotros.',
   keywords: [
     'canva pro colombia',
     'canva pro barato',
@@ -29,6 +29,16 @@ export const SITE_CONFIG = {
     'canva pro emprendedores',
     'canva pro sin mensualidades',
     'herramientas diseño colombia',
+    'canva pro precio colombia 2025',
+    'canva pro edu que es',
+    'canva pro oferta',
+    'diseño grafico profesional barato',
+    'como comprar canva pro en colombia',
+    'canva pro anual barato',
+    'canva pro licencia educativa',
+    'canva pro vs canva gratis',
+    'canva pro pago unico',
+    'diseñar como profesional gratis',
   ],
 };
 
