@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #7c3aed 0%, #00c4cc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glow-purple {
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.4);
+  }
+  .glow-green {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.35);
+  }
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px -10px rgba(124, 58, 237, 0.15);
+  }
+}
+
+/* FAQ accordion animation */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.faq-open .faq-content {
+  max-height: 600px;
+}
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+.faq-open .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Accessible focus */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-brand-purple rounded-lg;
+}
